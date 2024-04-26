@@ -1,0 +1,51 @@
+[0.263s] Invoking command in '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic /usr/bin/cmake --build /home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world -- -j2 -l2
+[0.352s] [100%] Built target turtlebot3_drive
+[0.371s] Invoked command in '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic /usr/bin/cmake --build /home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world -- -j2 -l2
+[0.435s] Invoking command in '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic /usr/bin/cmake --install /home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world
+[0.449s] -- Install configuration: ""
+[0.449s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/lib/agro_mate_world/turtlebot3_drive
+[0.450s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//launch
+[0.450s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//launch/turtlebot3_agro_mate_world.launch.py
+[0.450s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models
+[0.451s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/my_world
+[0.451s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/my_world/model.config
+[0.451s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/my_world/model.sdf
+[0.451s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant
+[0.452s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/model.config
+[0.452s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/model.sdf
+[0.452s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/mesh
+[0.453s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/mesh/big_plant.stl
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/model.config
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/model.sdf
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/mesh
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/mesh/small_plant.stl
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/blank.world
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/burger_pi.model
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/emptyfarm.world
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/farmWith1CropRow.world
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/burger.model
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//urdf
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//urdf/turtlebot3_burger_pi.urdf
+[0.454s] -- Up-to-date: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//urdf/turtlebot3_burger.urdf
+[0.455s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/include/
+[0.455s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/include//agro_mate_world
+[0.456s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/ament_index/resource_index/package_run_dependencies/agro_mate_world
+[0.456s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/ament_index/resource_index/parent_prefix_path/agro_mate_world
+[0.457s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/environment/ament_prefix_path.sh
+[0.458s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/environment/ament_prefix_path.dsv
+[0.459s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/environment/path.sh
+[0.459s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/environment/path.dsv
+[0.460s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/local_setup.bash
+[0.461s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/local_setup.sh
+[0.461s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/local_setup.zsh
+[0.462s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/local_setup.dsv
+[0.462s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/package.dsv
+[0.463s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/ament_index/resource_index/packages/agro_mate_world
+[0.463s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.463s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.464s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/cmake/agro_mate_worldConfig.cmake
+[0.464s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/cmake/agro_mate_worldConfig-version.cmake
+[0.464s] -- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world/package.xml
+[0.472s] Invoked command in '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic /usr/bin/cmake --install /home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world

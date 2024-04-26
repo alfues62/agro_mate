@@ -1,0 +1,6 @@
+CMake Error at cmake_install.cmake:70 (file):
+  file INSTALL cannot find
+  "/home/tallalsudo/turtlebot3_ws/src/agro_mate/agro_mate_world/include": No
+  such file or directory.
+
+
