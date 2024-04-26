@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href=http://download.ros.org/schema/package_format3.xsd schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-    <name>proy_asun</name>
+    <name>agro_mate</name>
     <version>2.1.4</version>
     <description>
         Paquetes de ROS2 para el proyecto de AgroMate
@@ -9,7 +9,7 @@
     <maintainer email="asperez@eln.upv.es">Asun Perez</maintainer>
     <license>Apache 2.0</license>
     <buildtool_depend>ament_cmake</buildtool_depend>
-    <exec_depend>agro_mate_v1_mundo</exec_depend>
+    <exec_depend>agro_mate_world</exec_depend>
     <export>
         <build_type>ament_cmake</build_type>
     </export>
