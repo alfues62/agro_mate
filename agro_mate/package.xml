@@ -11,6 +11,8 @@
     <buildtool_depend>ament_cmake</buildtool_depend>
     <exec_depend>mundo_pilares</exec_depend>
     <exec_depend>agro_mate_world_2</exec_depend>
+    <exec_depend>my_slam</exec_depend>
+    <exec_depend>provide_map</exec_depend>
     <export>
         <build_type>ament_cmake</build_type>
     </export>
