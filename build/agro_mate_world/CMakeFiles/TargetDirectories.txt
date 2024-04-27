@@ -1,0 +1,10 @@
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/install/strip.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/install/local.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/edit_cache.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/test.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/install.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/list_install_components.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/rebuild_cache.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/turtlebot3_drive.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/agro_mate_world_uninstall.dir
+/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world/CMakeFiles/uninstall.dir

@@ -1,0 +1,376 @@
+[0.000000] (-) TimerEvent: {}
+[0.000776] (-) JobUnselected: {'identifier': 'agro_mate'}
+[0.000854] (agro_mate_world) JobQueued: {'identifier': 'agro_mate_world', 'dependencies': OrderedDict()}
+[0.000898] (agro_mate_world) JobStarted: {'identifier': 'agro_mate_world'}
+[0.098450] (-) TimerEvent: {}
+[0.200057] (-) TimerEvent: {}
+[0.257991] (agro_mate_world) JobProgress: {'identifier': 'agro_mate_world', 'progress': 'cmake'}
+[0.259416] (agro_mate_world) Command: {'cmd': ['/usr/bin/cmake', '/home/tallalsudo/turtlebot3_ws/src/agro_mate/agro_mate_world', '-DCMAKE_INSTALL_PREFIX=/home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world'], 'cwd': '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'tallalsudo'), ('LC_TIME', 'fr_FR.UTF-8'), ('SSH_AGENT_PID', '1324'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tallalsudo/turtlebot3_ws/install/custom_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/tallalsudo'), ('OLDPWD', '/home/tallalsudo/turtlebot3_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1006'), ('ROS_LOG_DIR', '/home/tallalsudo/my_logs'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'tallalsudo'), ('JOURNAL_STREAM', '8:30548'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tallalsudo'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/tallalsudo/turtlebot3_ws/src/my_world/models:/home/tallalsudo/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/tallalsudo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntorobotica:@/tmp/.ICE-unix/1379,unix/ubuntorobotica:/tmp/.ICE-unix/1379'), ('INVOCATION_ID', 'ef5c6ccc7b0b4352be5a59beeb9fe604'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c64641d3_0d14_485d_9b00_8f24d9311ce6'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('ROS_DOMAIN_ID', '4'), ('AMENT_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install/turtlebot3_simulations:/home/tallalsudo/turtlebot3_ws/install/my_world:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_fake_node:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/home/tallalsudo/turtlebot3_ws/install/custom_interface:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tallalsudo/turtlebot3_ws/install/show_msg/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_service/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_node/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/custom_interface/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install/turtlebot3_simulations:/home/tallalsudo/turtlebot3_ws/install/my_world:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_fake_node:/home/tallalsudo/turtlebot3_ws/install/custom_interface:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic')]), 'shell': False}
+[0.300287] (-) TimerEvent: {}
+[0.352466] (agro_mate_world) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.400474] (-) TimerEvent: {}
+[0.428976] (agro_mate_world) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.436217] (agro_mate_world) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.500612] (-) TimerEvent: {}
+[0.529468] (agro_mate_world) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.529755] (agro_mate_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600848] (-) TimerEvent: {}
+[0.701666] (-) TimerEvent: {}
+[0.716459] (agro_mate_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.729130] (agro_mate_world) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.730220] (agro_mate_world) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.740548] (agro_mate_world) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.803191] (-) TimerEvent: {}
+[0.903577] (agro_mate_world) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.904444] (-) TimerEvent: {}
+[0.905549] (agro_mate_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.005101] (-) TimerEvent: {}
+[1.044643] (agro_mate_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.055633] (agro_mate_world) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.057156] (agro_mate_world) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.059410] (agro_mate_world) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[1.105355] (-) TimerEvent: {}
+[1.114188] (agro_mate_world) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.114425] (agro_mate_world) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.205782] (-) TimerEvent: {}
+[1.307163] (-) TimerEvent: {}
+[1.320218] (agro_mate_world) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") \n'}
+[1.330920] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[1.379782] (agro_mate_world) StdoutLine: {'line': b'--   Found bullet, version 2.88\n'}
+[1.407404] (-) TimerEvent: {}
+[1.507999] (-) TimerEvent: {}
+[1.608473] (-) TimerEvent: {}
+[1.618611] (agro_mate_world) StdoutLine: {'line': b'-- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") \n'}
+[1.701415] (agro_mate_world) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") \n'}
+[1.708655] (-) TimerEvent: {}
+[1.786711] (agro_mate_world) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.0.0") \n'}
+[1.808842] (-) TimerEvent: {}
+[1.821264] (agro_mate_world) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[1.909208] (-) TimerEvent: {}
+[2.009991] (-) TimerEvent: {}
+[2.110652] (-) TimerEvent: {}
+[2.211352] (-) TimerEvent: {}
+[2.297218] (agro_mate_world) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[2.311476] (-) TimerEvent: {}
+[2.326696] (agro_mate_world) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") \n'}
+[2.333789] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.347785] (agro_mate_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[2.351499] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[2.351960] (agro_mate_world) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[2.359004] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[2.385716] (agro_mate_world) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[2.411626] (-) TimerEvent: {}
+[2.448404] (agro_mate_world) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[2.459365] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[2.474432] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[2.482441] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[2.485229] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[2.492420] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[2.492673] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[2.499769] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[2.500107] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[2.512395] (-) TimerEvent: {}
+[2.513294] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[2.513487] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[2.522384] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[2.522646] (agro_mate_world) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[2.531175] (agro_mate_world) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[2.612755] (-) TimerEvent: {}
+[2.713875] (-) TimerEvent: {}
+[2.723606] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.726597] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.3.0\n'}
+[2.727309] (agro_mate_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[2.754027] (agro_mate_world) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") \n'}
+[2.768554] (agro_mate_world) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[2.778364] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[2.814120] (-) TimerEvent: {}
+[2.815881] (agro_mate_world) StdoutLine: {'line': b'--   Found libzmq , version 4.3.2\n'}
+[2.876882] (agro_mate_world) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[2.885214] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[2.909806] (agro_mate_world) StdoutLine: {'line': b'--   Found uuid, version 2.34.0\n'}
+[2.914360] (-) TimerEvent: {}
+[2.966013] (agro_mate_world) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[2.971619] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.10.0\n'}
+[2.973253] (agro_mate_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[2.997361] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.007245] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[3.015386] (-) TimerEvent: {}
+[3.031610] (agro_mate_world) StdoutLine: {'line': b'--   Found tinyxml2, version 6.2.0\n'}
+[3.111888] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.10.0\n'}
+[3.115525] (-) TimerEvent: {}
+[3.116082] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.2\n'}
+[3.119750] (agro_mate_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[3.120692] (agro_mate_world) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[3.122305] (agro_mate_world) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[3.124317] (agro_mate_world) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[3.161559] (agro_mate_world) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[3.184791] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.2\n'}
+[3.185898] (agro_mate_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[3.186336] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.193147] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.6.0\n'}
+[3.193624] (agro_mate_world) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[3.215751] (-) TimerEvent: {}
+[3.316321] (-) TimerEvent: {}
+[3.333471] (agro_mate_world) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  \n'}
+[3.349591] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[3.377257] (agro_mate_world) StdoutLine: {'line': b'--   Found jsoncpp, version 1.7.4\n'}
+[3.416564] (-) TimerEvent: {}
+[3.433556] (agro_mate_world) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[3.444252] (agro_mate_world) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[3.466775] (agro_mate_world) StdoutLine: {'line': b'--   Found libzip, version 1.5.1\n'}
+[3.517124] (-) TimerEvent: {}
+[3.525862] (agro_mate_world) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[3.526476] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.2\n'}
+[3.526998] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.527973] (agro_mate_world) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.10.0\n'}
+[3.531983] (agro_mate_world) StdoutLine: {'line': b'-- Found gazebo_ros_pkgs: 3.5.2 (/opt/ros/galactic/share/gazebo_ros_pkgs/cmake)\n'}
+[3.534465] (agro_mate_world) StdoutLine: {'line': b'-- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)\n'}
+[3.595026] (agro_mate_world) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.615957] (agro_mate_world) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[3.617284] (-) TimerEvent: {}
+[3.717683] (-) TimerEvent: {}
+[3.818187] (-) TimerEvent: {}
+[3.822540] (agro_mate_world) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[3.864710] (agro_mate_world) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/galactic/include  \n'}
+[3.918995] (-) TimerEvent: {}
+[3.997466] (agro_mate_world) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.019318] (-) TimerEvent: {}
+[4.115784] (agro_mate_world) StdoutLine: {'line': b'-- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)\n'}
+[4.119895] (-) TimerEvent: {}
+[4.209776] (agro_mate_world) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[4.220280] (-) TimerEvent: {}
+[4.292753] (agro_mate_world) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[4.297534] (agro_mate_world) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[4.320533] (-) TimerEvent: {}
+[4.325259] (agro_mate_world) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[4.327584] (agro_mate_world) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.420702] (-) TimerEvent: {}
+[4.517531] (agro_mate_world) StdoutLine: {'line': b'-- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)\n'}
+[4.521208] (-) TimerEvent: {}
+[4.611155] (agro_mate_world) StdoutLine: {'line': b'-- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)\n'}
+[4.621443] (-) TimerEvent: {}
+[4.624027] (agro_mate_world) StdoutLine: {'line': b'-- Found turtlebot3_gazebo: 2.2.4 (/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake)\n'}
+[4.722112] (-) TimerEvent: {}
+[4.761036] (agro_mate_world) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.775042] (agro_mate_world) StdoutLine: {'line': b'-- Generating done\n'}
+[4.777940] (agro_mate_world) StdoutLine: {'line': b'-- Build files have been written to: /home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world\n'}
+[4.796558] (agro_mate_world) CommandEnded: {'returncode': 0}
+[4.799235] (agro_mate_world) JobProgress: {'identifier': 'agro_mate_world', 'progress': 'build'}
+[4.799365] (agro_mate_world) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world', '--', '-j2', '-l2'], 'cwd': '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'tallalsudo'), ('LC_TIME', 'fr_FR.UTF-8'), ('SSH_AGENT_PID', '1324'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tallalsudo/turtlebot3_ws/install/custom_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/tallalsudo'), ('OLDPWD', '/home/tallalsudo/turtlebot3_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1006'), ('ROS_LOG_DIR', '/home/tallalsudo/my_logs'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'tallalsudo'), ('JOURNAL_STREAM', '8:30548'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tallalsudo'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/tallalsudo/turtlebot3_ws/src/my_world/models:/home/tallalsudo/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/tallalsudo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntorobotica:@/tmp/.ICE-unix/1379,unix/ubuntorobotica:/tmp/.ICE-unix/1379'), ('INVOCATION_ID', 'ef5c6ccc7b0b4352be5a59beeb9fe604'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c64641d3_0d14_485d_9b00_8f24d9311ce6'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('ROS_DOMAIN_ID', '4'), ('AMENT_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install/turtlebot3_simulations:/home/tallalsudo/turtlebot3_ws/install/my_world:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_fake_node:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/home/tallalsudo/turtlebot3_ws/install/custom_interface:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tallalsudo/turtlebot3_ws/install/show_msg/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_service/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_node/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/custom_interface/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install/turtlebot3_simulations:/home/tallalsudo/turtlebot3_ws/install/my_world:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_fake_node:/home/tallalsudo/turtlebot3_ws/install/custom_interface:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic')]), 'shell': False}
+[4.822587] (-) TimerEvent: {}
+[4.872348] (agro_mate_world) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target turtlebot3_drive\x1b[0m\n'}
+[4.923201] (-) TimerEvent: {}
+[4.941588] (agro_mate_world) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o\x1b[0m\n'}
+[5.023377] (-) TimerEvent: {}
+[5.123811] (-) TimerEvent: {}
+[5.224192] (-) TimerEvent: {}
+[5.324609] (-) TimerEvent: {}
+[5.425034] (-) TimerEvent: {}
+[5.525457] (-) TimerEvent: {}
+[5.625879] (-) TimerEvent: {}
+[5.727179] (-) TimerEvent: {}
+[5.827654] (-) TimerEvent: {}
+[5.928265] (-) TimerEvent: {}
+[6.029085] (-) TimerEvent: {}
+[6.129559] (-) TimerEvent: {}
+[6.230069] (-) TimerEvent: {}
+[6.330676] (-) TimerEvent: {}
+[6.431882] (-) TimerEvent: {}
+[6.532848] (-) TimerEvent: {}
+[6.633362] (-) TimerEvent: {}
+[6.733812] (-) TimerEvent: {}
+[6.834510] (-) TimerEvent: {}
+[6.935340] (-) TimerEvent: {}
+[7.036460] (-) TimerEvent: {}
+[7.137407] (-) TimerEvent: {}
+[7.239289] (-) TimerEvent: {}
+[7.339921] (-) TimerEvent: {}
+[7.440784] (-) TimerEvent: {}
+[7.541513] (-) TimerEvent: {}
+[7.642394] (-) TimerEvent: {}
+[7.742975] (-) TimerEvent: {}
+[7.843431] (-) TimerEvent: {}
+[7.943880] (-) TimerEvent: {}
+[8.044537] (-) TimerEvent: {}
+[8.145734] (-) TimerEvent: {}
+[8.246168] (-) TimerEvent: {}
+[8.346816] (-) TimerEvent: {}
+[8.447425] (-) TimerEvent: {}
+[8.547906] (-) TimerEvent: {}
+[8.651167] (-) TimerEvent: {}
+[8.751764] (-) TimerEvent: {}
+[8.852319] (-) TimerEvent: {}
+[8.952789] (-) TimerEvent: {}
+[9.053295] (-) TimerEvent: {}
+[9.154610] (-) TimerEvent: {}
+[9.255200] (-) TimerEvent: {}
+[9.355709] (-) TimerEvent: {}
+[9.456236] (-) TimerEvent: {}
+[9.556722] (-) TimerEvent: {}
+[9.657075] (-) TimerEvent: {}
+[9.757492] (-) TimerEvent: {}
+[9.858017] (-) TimerEvent: {}
+[9.958644] (-) TimerEvent: {}
+[10.059402] (-) TimerEvent: {}
+[10.160066] (-) TimerEvent: {}
+[10.260868] (-) TimerEvent: {}
+[10.361537] (-) TimerEvent: {}
+[10.462009] (-) TimerEvent: {}
+[10.562490] (-) TimerEvent: {}
+[10.663123] (-) TimerEvent: {}
+[10.763554] (-) TimerEvent: {}
+[10.863971] (-) TimerEvent: {}
+[10.964417] (-) TimerEvent: {}
+[11.064891] (-) TimerEvent: {}
+[11.165364] (-) TimerEvent: {}
+[11.266068] (-) TimerEvent: {}
+[11.366489] (-) TimerEvent: {}
+[11.467135] (-) TimerEvent: {}
+[11.567544] (-) TimerEvent: {}
+[11.667945] (-) TimerEvent: {}
+[11.768461] (-) TimerEvent: {}
+[11.869296] (-) TimerEvent: {}
+[11.970240] (-) TimerEvent: {}
+[12.071473] (-) TimerEvent: {}
+[12.173258] (-) TimerEvent: {}
+[12.274991] (-) TimerEvent: {}
+[12.375596] (-) TimerEvent: {}
+[12.476976] (-) TimerEvent: {}
+[12.577784] (-) TimerEvent: {}
+[12.678994] (-) TimerEvent: {}
+[12.779555] (-) TimerEvent: {}
+[12.880047] (-) TimerEvent: {}
+[12.980677] (-) TimerEvent: {}
+[13.081706] (-) TimerEvent: {}
+[13.182298] (-) TimerEvent: {}
+[13.282908] (-) TimerEvent: {}
+[13.383601] (-) TimerEvent: {}
+[13.484449] (-) TimerEvent: {}
+[13.584916] (-) TimerEvent: {}
+[13.685527] (-) TimerEvent: {}
+[13.786139] (-) TimerEvent: {}
+[13.886925] (-) TimerEvent: {}
+[13.987403] (-) TimerEvent: {}
+[14.087957] (-) TimerEvent: {}
+[14.188541] (-) TimerEvent: {}
+[14.289076] (-) TimerEvent: {}
+[14.389635] (-) TimerEvent: {}
+[14.490159] (-) TimerEvent: {}
+[14.590701] (-) TimerEvent: {}
+[14.691353] (-) TimerEvent: {}
+[14.791839] (-) TimerEvent: {}
+[14.892252] (-) TimerEvent: {}
+[14.992683] (-) TimerEvent: {}
+[15.093121] (-) TimerEvent: {}
+[15.193555] (-) TimerEvent: {}
+[15.294107] (-) TimerEvent: {}
+[15.394832] (-) TimerEvent: {}
+[15.495402] (-) TimerEvent: {}
+[15.595962] (-) TimerEvent: {}
+[15.696395] (-) TimerEvent: {}
+[15.796871] (-) TimerEvent: {}
+[15.897320] (-) TimerEvent: {}
+[15.998137] (-) TimerEvent: {}
+[16.098792] (-) TimerEvent: {}
+[16.199356] (-) TimerEvent: {}
+[16.300096] (-) TimerEvent: {}
+[16.400744] (-) TimerEvent: {}
+[16.501635] (-) TimerEvent: {}
+[16.602320] (-) TimerEvent: {}
+[16.703327] (-) TimerEvent: {}
+[16.806256] (-) TimerEvent: {}
+[16.906962] (-) TimerEvent: {}
+[17.008362] (-) TimerEvent: {}
+[17.108973] (-) TimerEvent: {}
+[17.209737] (-) TimerEvent: {}
+[17.310387] (-) TimerEvent: {}
+[17.411002] (-) TimerEvent: {}
+[17.511725] (-) TimerEvent: {}
+[17.612499] (-) TimerEvent: {}
+[17.713066] (-) TimerEvent: {}
+[17.813600] (-) TimerEvent: {}
+[17.914082] (-) TimerEvent: {}
+[18.015110] (-) TimerEvent: {}
+[18.115815] (-) TimerEvent: {}
+[18.216372] (-) TimerEvent: {}
+[18.316892] (-) TimerEvent: {}
+[18.417412] (-) TimerEvent: {}
+[18.517942] (-) TimerEvent: {}
+[18.618552] (-) TimerEvent: {}
+[18.719203] (-) TimerEvent: {}
+[18.819875] (-) TimerEvent: {}
+[18.920427] (-) TimerEvent: {}
+[19.021013] (-) TimerEvent: {}
+[19.121435] (-) TimerEvent: {}
+[19.222015] (-) TimerEvent: {}
+[19.322649] (-) TimerEvent: {}
+[19.423222] (-) TimerEvent: {}
+[19.524123] (-) TimerEvent: {}
+[19.624542] (-) TimerEvent: {}
+[19.725022] (-) TimerEvent: {}
+[19.826472] (-) TimerEvent: {}
+[19.926942] (-) TimerEvent: {}
+[20.027481] (-) TimerEvent: {}
+[20.128588] (-) TimerEvent: {}
+[20.229134] (-) TimerEvent: {}
+[20.329657] (-) TimerEvent: {}
+[20.436654] (-) TimerEvent: {}
+[20.538715] (-) TimerEvent: {}
+[20.640519] (-) TimerEvent: {}
+[20.741313] (-) TimerEvent: {}
+[20.842143] (-) TimerEvent: {}
+[20.943073] (-) TimerEvent: {}
+[20.968889] (agro_mate_world) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable turtlebot3_drive\x1b[0m\n'}
+[21.043331] (-) TimerEvent: {}
+[21.143890] (-) TimerEvent: {}
+[21.244979] (-) TimerEvent: {}
+[21.345710] (-) TimerEvent: {}
+[21.446693] (-) TimerEvent: {}
+[21.547404] (-) TimerEvent: {}
+[21.648156] (-) TimerEvent: {}
+[21.748596] (-) TimerEvent: {}
+[21.834431] (agro_mate_world) StdoutLine: {'line': b'[100%] Built target turtlebot3_drive\n'}
+[21.848873] (-) TimerEvent: {}
+[21.858110] (agro_mate_world) CommandEnded: {'returncode': 0}
+[21.908543] (agro_mate_world) JobProgress: {'identifier': 'agro_mate_world', 'progress': 'install'}
+[21.926896] (agro_mate_world) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world'], 'cwd': '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'tallalsudo'), ('LC_TIME', 'fr_FR.UTF-8'), ('SSH_AGENT_PID', '1324'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/tallalsudo/turtlebot3_ws/install/custom_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/tallalsudo'), ('OLDPWD', '/home/tallalsudo/turtlebot3_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1006'), ('ROS_LOG_DIR', '/home/tallalsudo/my_logs'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'tallalsudo'), ('JOURNAL_STREAM', '8:30548'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tallalsudo'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/tallalsudo/turtlebot3_ws/src/my_world/models:/home/tallalsudo/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/tallalsudo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntorobotica:@/tmp/.ICE-unix/1379,unix/ubuntorobotica:/tmp/.ICE-unix/1379'), ('INVOCATION_ID', 'ef5c6ccc7b0b4352be5a59beeb9fe604'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c64641d3_0d14_485d_9b00_8f24d9311ce6'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('ROS_DOMAIN_ID', '4'), ('AMENT_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install/turtlebot3_simulations:/home/tallalsudo/turtlebot3_ws/install/my_world:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_fake_node:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/home/tallalsudo/turtlebot3_ws/install/custom_interface:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tallalsudo/turtlebot3_ws/src/agro_mate/build/agro_mate_world'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tallalsudo/turtlebot3_ws/install/show_msg/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_service/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/my_first_node/lib/python3.8/site-packages:/home/tallalsudo/turtlebot3_ws/install/custom_interface/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/tallalsudo/turtlebot3_ws/install/turtlebot3_simulations:/home/tallalsudo/turtlebot3_ws/install/my_world:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_gazebo:/home/tallalsudo/turtlebot3_ws/install/turtlebot3_fake_node:/home/tallalsudo/turtlebot3_ws/install/custom_interface:/home/tallalsudo/turtlebot3_ws/install/show_msg:/home/tallalsudo/turtlebot3_ws/install/my_first_subscriber:/home/tallalsudo/turtlebot3_ws/install/my_first_service:/home/tallalsudo/turtlebot3_ws/install/my_first_publisher:/home/tallalsudo/turtlebot3_ws/install/my_first_node:/opt/ros/galactic')]), 'shell': False}
+[21.948610] (agro_mate_world) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.949072] (-) TimerEvent: {}
+[21.950390] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/lib/agro_mate_world/turtlebot3_drive\n'}
+[21.974574] (agro_mate_world) StdoutLine: {'line': b'-- Set runtime path of "/home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/lib/agro_mate_world/turtlebot3_drive" to ""\n'}
+[21.975136] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//launch\n'}
+[21.976457] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//launch/turtlebot3_agro_mate_world.launch.py\n'}
+[21.976849] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models\n'}
+[21.976991] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/my_world\n'}
+[21.977267] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/my_world/model.config\n'}
+[21.977769] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/my_world/model.sdf\n'}
+[21.981143] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant\n'}
+[21.982795] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/model.config\n'}
+[21.984274] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/model.sdf\n'}
+[21.984568] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/mesh\n'}
+[21.991034] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/big_plant/mesh/big_plant.stl\n'}
+[21.991233] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant\n'}
+[21.991337] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/model.config\n'}
+[21.991873] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/model.sdf\n'}
+[21.991965] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/mesh\n'}
+[21.992032] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//models/small_plant/mesh/small_plant.stl\n'}
+[21.992100] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world\n'}
+[21.992168] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/blank.world\n'}
+[21.992234] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/burger_pi.model\n'}
+[21.992299] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/emptyfarm.world\n'}
+[21.992401] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/farmWith1CropRow.world\n'}
+[21.992478] (agro_mate_world) StderrLine: {'line': b'CMake Error at cmake_install.cmake:70 (file):\n'}
+[21.992573] (agro_mate_world) StderrLine: {'line': b'  file INSTALL cannot find\n'}
+[21.992639] (agro_mate_world) StderrLine: {'line': b'  "/home/tallalsudo/turtlebot3_ws/src/agro_mate/agro_mate_world/include": No\n'}
+[21.992704] (agro_mate_world) StderrLine: {'line': b'  such file or directory.\n'}
+[21.992764] (agro_mate_world) StderrLine: {'line': b'\n'}
+[21.992825] (agro_mate_world) StderrLine: {'line': b'\n'}
+[21.992885] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//world/burger.model\n'}
+[21.992946] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//urdf\n'}
+[21.993010] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//urdf/turtlebot3_burger_pi.urdf\n'}
+[21.993079] (agro_mate_world) StdoutLine: {'line': b'-- Installing: /home/tallalsudo/turtlebot3_ws/src/agro_mate/install/agro_mate_world/share/agro_mate_world//urdf/turtlebot3_burger.urdf\n'}
+[21.993146] (agro_mate_world) CommandEnded: {'returncode': 1}
+[22.049835] (-) TimerEvent: {}
+[22.153340] (-) TimerEvent: {}
+[22.201446] (agro_mate_world) JobEnded: {'identifier': 'agro_mate_world', 'rc': 1}
+[22.212932] (-) EventReactorShutdown: {}
