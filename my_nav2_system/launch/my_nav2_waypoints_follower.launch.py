@@ -46,12 +46,12 @@ def generate_launch_description():
             arguments=['-d', rviz_config_dir],
             parameters=[{'use_sim_time': True}],
             output='screen'
-        )
+        ),
         Node(
-            package='nav2_waypoint_follower',
-            executable='waypoint_follower',
-            name='waypoint_follower',
+            package='my_nav2_system',
+            executable='my_waypoint_follower',
+            name='my_waypoint_follower',
             output='screen',
             parameters=[nav2_yaml, {'use_sim_time': True}]
-        ),
-    ])
+        )
+])
