@@ -13,6 +13,8 @@
     <exec_depend>agro_mate_world_2</exec_depend>
     <exec_depend>my_slam</exec_depend>
     <exec_depend>provide_map</exec_depend>
+    <exec_depend>custom_interface</exec_depend>
+    <exec_depend>my_nav2_system</exec_depend>
     <export>
         <build_type>ament_cmake</build_type>
     </export>
