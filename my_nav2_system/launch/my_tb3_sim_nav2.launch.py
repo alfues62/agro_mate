@@ -16,6 +16,7 @@ def generate_launch_description():
    # urdf = os.path.join(get_package_share_directory('turtlebot3_description'), 'urdf', 'turtlebot3_burger.urdf')
    # world = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'worlds', 'turtlebot3_worlds/burger.model')
 
+
     return LaunchDescription([
         Node(
             package = 'nav2_map_server',
@@ -73,12 +74,26 @@ def generate_launch_description():
                         {'node_names':['map_server', 'amcl', 'planner_server', 'controller_server', 'recoveries_server', 'bt_navigator']}]
         ),
 
-         Node(
-               package='rviz2',
-               executable='rviz2',
-               name='rviz2',
-               arguments=['-d', rviz_config_dir],
-               parameters=[{'use_sim_time': True}],
-               output='screen'
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', rviz_config_dir],
+            parameters=[{'use_sim_time': True}],
+            output='screen'
+        ),
+
+        Node(
+            package='my_nav2_system',  # Nombre del paquete que contiene el ejecutable
+            executable='initial_pose_pub',  # Ruta al archivo ejecutable dentro del paquete
+            name='initial_pose_pub',  # Nombre que deseas dar al nodo
+            output='screen'  # Tipo de salida
         )
+
+        #Node(
+        #    package='publisher_initialpose', turtlebot3_ws/install/my_nav2_system/lib/my_nav2_system/initial_pose_pub
+        #    executable=os.path.join(os.environ['HOME'], 'turtlebot3_ws/install/publisher_initialpose/lib/publisher_initialpose/simple_publisher'),
+        #    name='simple_publisher',
+        #    output='screen'
+        #)
     ])
