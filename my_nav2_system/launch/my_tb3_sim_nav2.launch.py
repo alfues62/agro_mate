@@ -86,7 +86,7 @@ def generate_launch_description():
         Node(
             package='my_nav2_system',  # Nombre del paquete que contiene el ejecutable
             executable='initial_pose_pub',  # Ruta al archivo ejecutable dentro del paquete
-            name='initial_pose_pub',  # Nombre que deseas dar al nodo
+            name='initial_pose_pub_node',  # Nombre que deseas dar al nodo
             output='screen'  # Tipo de salida
         )
 
