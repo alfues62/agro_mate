@@ -42,6 +42,16 @@ amcl:
     initial_pose_y: 0.0
     initial_pose_a: 1.0
 
+waypoint_follower:
+  ros__parameters:
+    loop_rate: 20
+    stop_on_failure: false
+    waypoint_task_executor_plugin: "wait_at_waypoint"
+    wait_at_waypoint:
+      plugin: "nav2_waypoint_follower::WaitAtWaypoint"
+      enabled: True
+      waypoint_pause_duration: 200
+
 amcl_map_client:
   ros__parameters:
     use_sim_time: True
@@ -244,7 +254,7 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: True
-    yaml_filename: "turtlebot3_house.yaml"
+    yaml_filename: "my_map.yaml"
 
 map_saver:
   ros__parameters:
