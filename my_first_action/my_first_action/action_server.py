@@ -1,62 +1,59 @@
-# action_server.py
 import rclpy
 from rclpy.action import ActionServer
 from rclpy.node import Node
-from custom_interface.action import Move
-from geometry_msgs.msg import Twist
-import time
+from nav2_msgs.action import NavigateToPose  # Importar el tipo de acción para la navegación
+from geometry_msgs.msg import PoseStamped  # Para trabajar con el goal pose
 
 class MyActionServer(Node):
-
     def __init__(self):
         super().__init__('my_action_server')
-        #creamos el servidor de la accion
-        #con parametros : 
-        # nodo servidor,
-        # tipo de mensaje
-        # nombre de la accion
-        # funcion a ejecutar
-        self.action_server = ActionServer(self, Move, 'moving_as', self.execute_callback )
-        # creamos objeto tipo Twist para enviar la velocidad del robot
-        self.cmd = Twist()
-        #creamos el publisher para el topic cmd_vel con parametros:
-        # tipo de mensaje
-        # nombre del topic
-        # tamaño de la cola
-        self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        # Crear el servidor de acción para 'NavigateToPose'
+        self._action_server = ActionServer(
+            self,
+            NavigateToPose,
+            'navigate_to_pose',
+            execute_callback=self.execute_callback,  # Función que maneja el goal
+            cancel_callback=self.cancel_callback  # Función para manejar cancelaciones
+        )
 
     def execute_callback(self, goal_handle):
-        self.get_logger().info('Recibiendo el Goal...')
+        # Obtenemos el goal del cliente
+        goal = goal_handle.request
+        pose = goal.pose  # La posición de destino
 
-        feedback_msg = Move.Feedback()
-        feedback_msg.feedback = "Moviendo el robot a la izquierda..."
+        # Proporcionamos feedback periódico mientras el goal está en progreso
+        self.get_logger().info(f'Goal received: {pose.pose.position}')
 
-        for i in range(1, goal_handle.request.secs):
-            self.get_logger().info('Feedback: '.format(feedback_msg.feedback))
+        # Aquí puedes implementar la lógica para llevar al robot a la posición indicada.
+        # Por simplicidad, usaremos un bucle simulado para emular el progreso.
+        import time
+        for i in range(10):
+            time.sleep(0.5)  # Simulamos un retraso
+            # Proporcionar feedback
+            feedback_msg = NavigateToPose.Feedback()
+            feedback_msg.feedback = f'Progress: {i * 10}%'
             goal_handle.publish_feedback(feedback_msg)
-            self.cmd.linear.x = 0.3
-            self.cmd.angular.z = 0.3
 
-            self.publisher.publish(self.cmd)
-            time.sleep(1)
-
+        # Indicamos que el goal se completó
         goal_handle.succeed()
 
-        #paramos el robot
-        self.cmd.linear.x = 0.0
-        self.cmd.angular.z = 0.0
-        self.publisher.publish(self.cmd)
-        feedback_msg.feedback = "¡Accion finalizada!"
-        result = Move.Result()
-        result.status = feedback_msg.feedback
+        # Devolver el resultado
+        result = NavigateToPose.Result()
+        result.result = 'Navigation Complete'
         return result
+
+    def cancel_callback(self, goal_handle):
+        self.get_logger().info('Goal canceled')
+        return rclpy.action.GoalResponse.CANCELLED
+
 
 def main(args=None):
     rclpy.init(args=args)
 
-    my_action_server = MyActionServer()
+    action_server = MyActionServer()
 
-    rclpy.spin(my_action_server)
+    rclpy.spin(action_server)  # Mantiene el servidor ejecutándose hasta que se detenga
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

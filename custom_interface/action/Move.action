@@ -1,8 +1,11 @@
-#goal
-int32 secs #segundos que el robot permanece moviendose
+# goal
+geometry_msgs/PoseStamped target_pose  # Objetivo de la acción, una posición y orientación
+
 ---
-#result
-string status #estado final de la accion
+# result
+bool success  # Indica si se alcanzó la posición
+string message  # Un mensaje para describir el resultado final
+
 ---
-#feedback
-string feedback #estado actual del robot
+# feedback
+float32 progress  # Un valor que representa el progreso del movimiento, por ejemplo, un porcentaje

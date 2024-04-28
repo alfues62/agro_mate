@@ -1,36 +1,35 @@
-#action_client.py
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
-from custom_interface.action import Move
+from nav2_msgs.action import NavigateToPose  # Importación de la acción de navegación
+from geometry_msgs.msg import PoseStamped  # Importación del tipo de mensaje para el goal
 
 
 class MyActionClient(Node):
-
     def __init__(self):
         super().__init__('my_action_client')
-        #creamos el objeto cliente de una accion
-        #con parametros
-        #nodo
-        #tipo de mensaje
-        #nombre de la accion
-        self._action_client = ActionClient(self, Move, 'moving_as')
+        # Crear el cliente de acción para 'NavigateToPose'
+        self._action_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
 
-    #definimos la funcion de mandar goal
-    def send_goal(self, secs):
-        # crea el mensaje tipo Goal
-        # y lo rellena con el argumento dado
-        goal_msg = Move.Goal()
-        goal_msg.secs = secs
+    def send_goal(self, x, y):
+        # Crear el mensaje de goal y establecer la posición
+        goal_msg = NavigateToPose.Goal()
+        goal_msg.pose = PoseStamped()
+        goal_msg.pose.header.frame_id = 'map'
+        goal_msg.pose.pose.position.x = x
+        goal_msg.pose.pose.position.y = y
+        goal_msg.pose.pose.orientation.w = 1.0  # Orientación hacia adelante
 
-        #espera a que el servidor este listo
+        # Esperar a que el servidor de acción esté listo
         self._action_client.wait_for_server()
-        # envia el goal
-        self._send_goal_future = self._action_client.send_goal_async(goal_msg,feedback_callback=self.feedback_callback)
 
-        self._send_goal_future.add_done_callback(self.goal_response_callback)
-    
-    #definimos la funcion de respuesta al goal
+        # Enviar el goal y configurar los callbacks
+        send_goal_future = self._action_client.send_goal_async(
+            goal_msg,
+            feedback_callback=self.feedback_callback
+        )
+        send_goal_future.add_done_callback(self.goal_response_callback)
+
     def goal_response_callback(self, future):
         goal_handle = future.result()
         if not goal_handle.accepted:
@@ -39,28 +38,25 @@ class MyActionClient(Node):
 
         self.get_logger().info('Goal accepted :)')
 
-        self._get_result_future = goal_handle.get_result_async()
-        self._get_result_future.add_done_callback(self.get_result_callback)
-    
-    #definimos la funcion de respuesta al resultado
+        get_result_future = goal_handle.get_result_async()
+        get_result_future.add_done_callback(self.get_result_callback)
+
     def get_result_callback(self, future):
         result = future.result().result
-        self.get_logger().info('Result: {0}'.format(result.status))
+        self.get_logger().info(f'Result: {result}')
         rclpy.shutdown()
 
-    #definimos la funcion de respuesta al feedback
     def feedback_callback(self, feedback_msg):
         feedback = feedback_msg.feedback
-        self.get_logger().info('Received feedback: {0}'.format(feedback.feedback))
+        self.get_logger().info(f'Received feedback: {feedback}')
 
-    
 
 def main(args=None):
     rclpy.init(args=args)
 
+    # Crear el cliente de acción y enviar el goal para la posición (x, y)
     action_client = MyActionClient()
-
-    future = action_client.send_goal(5) # se para secs como argumento
+    action_client.send_goal(2.0, 3.0)  # Posición a la que queremos que el robot navegue
 
     rclpy.spin(action_client)
 
