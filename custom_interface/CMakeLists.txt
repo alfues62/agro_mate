@@ -40,5 +40,6 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Distvel.msg"
   "action/Move.action" #incluir
+  "action/Waypoints.action" #incluir
 )
 ament_package()

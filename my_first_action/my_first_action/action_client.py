@@ -56,7 +56,7 @@ def main(args=None):
 
     # Crear el cliente de acción y enviar el goal para la posición (x, y)
     action_client = MyActionClient()
-    action_client.send_goal(2.0, 3.0)  # Posición a la que queremos que el robot navegue
+    action_client.send_goal(2.5, -0.5)  # Posición a la que queremos que el robot navegue
 
     rclpy.spin(action_client)
 
