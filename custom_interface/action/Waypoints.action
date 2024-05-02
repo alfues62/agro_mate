@@ -1,0 +1,11 @@
+# goal
+geometry_msgs/PoseStamped[] waypoints  # Lista de waypoints a seguir
+
+---
+# result
+bool success  # Indica si se completó la acción
+string message  # Mensaje para describir el resultado final
+
+---
+# feedback
+int32 current_waypoint  # Índice del waypoint actual
