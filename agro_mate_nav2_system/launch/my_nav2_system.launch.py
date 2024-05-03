@@ -46,5 +46,17 @@ def generate_launch_description():
             arguments=['-d', rviz_config_dir],
             parameters=[{'use_sim_time': True}],
             output='screen'
+<<<<<<< HEAD:agro_mate_nav2_system/launch/my_nav2_system.launch.py
         )
     ])
+=======
+        ),
+        Node(
+            package='my_nav2_system',
+            executable='my_waypoint_follower',
+            name='my_waypoint_follower',
+            output='screen',
+            parameters=[nav2_yaml, {'use_sim_time': True}]
+        )
+])
+>>>>>>> 4d648f6b95bbd8d2170d77827e9b721f71fe678d:my_nav2_system/launch/my_nav2_waypoints_follower.launch.py
