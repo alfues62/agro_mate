@@ -64,15 +64,6 @@ def generate_launch_description():
             output='screen',
             parameters=[nav2_yaml, {'use_sim_time': True}]
         ),
-        Node(
-            package='nav2_lifecycle_manager',
-            executable='lifecycle_manager',
-            name='lifecycle_manager_pathplanner',
-            output='screen',
-            parameters=[{'use_sim_time': True},
-                        {'autostart': True},
-                        {'node_names':['map_server', 'amcl', 'planner_server', 'controller_server', 'recoveries_server', 'bt_navigator']}]
-        ),
 
         Node(
             package='rviz2',
@@ -88,5 +79,23 @@ def generate_launch_description():
             executable='initial_pose_pub',  # Ruta al archivo ejecutable dentro del paquete
             name='initial_pose_pub_node',  # Nombre que deseas dar al nodo
             output='screen'  # Tipo de salida
+        ),
+        
+        Node(
+            package='nav2_waypoint_follower',
+            executable='waypoint_follower',
+            name='waypoint_follower',
+            output='screen',
+            parameters=[nav2_yaml, {'use_sim_time': True}]
+        ),
+
+        Node(
+            package='nav2_lifecycle_manager',
+            executable='lifecycle_manager',
+            name='lifecycle_manager_pathplanner',
+            output='screen',
+            parameters=[{'use_sim_time': True},
+                        {'autostart': True},
+                        {'node_names':['map_server', 'amcl', 'planner_server', 'controller_server', 'recoveries_server', 'bt_navigator', 'waypoint_follower']}]
         )
     ])
