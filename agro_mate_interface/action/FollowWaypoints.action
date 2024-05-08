@@ -1,0 +1,18 @@
+# Goal definition
+uint32 number_of_loops
+uint32 goal_index
+geometry_msgs/PoseStamped[] poses
+
+---
+
+# Result definition
+uint16 NONE=0
+uint16 UNKNOWN=600
+uint16 TASK_EXECUTOR_FAILED=601
+
+MissedWaypoint[] missed_waypoints
+
+---
+
+# Feedback definition
+uint32 current_waypoint

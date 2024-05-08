@@ -30,7 +30,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'initial_pose_pub = agro_mate_nav2_system.initial_pose_pub:main' #añadir
+            'initial_pose_pub = agro_mate_nav2_system.initial_pose_pub:main', #añadir
+            'my_waypoints_follower = agro_mate_nav2_system.my_waypoints_follower:main'
         ],
     },
 )

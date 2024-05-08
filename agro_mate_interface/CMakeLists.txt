@@ -36,10 +36,15 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+find_package(geometry_msgs REQUIRED)
+
 # Añadir la siguiente funcion
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Distvel.msg"
   "action/Move.action" #incluir
   "action/Waypoints.action" #incluir
+  "action/FollowWaypoints.action" #incluir
+  "msg/MissedWaypoint.msg"
+  DEPENDENCIES geometry_msgs
 )
 ament_package()
