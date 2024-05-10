@@ -9,11 +9,13 @@
     <maintainer email="asperez@eln.upv.es">Asun Perez</maintainer>
     <license>Apache 2.0</license>
     <buildtool_depend>ament_cmake</buildtool_depend>
-    <exec_depend>mundo_pilares</exec_depend>
     <exec_depend>agro_mate_world_2</exec_depend>
-    <exec_depend>my_slam</exec_depend>
-    <exec_depend>provide_map</exec_depend>
+    <exec_depend>agro_mate_slam</exec_depend>
+    <exec_depend>agro_mate_provide_map</exec_depend>
+    <exec_depend>agro_mate_nav2_system</exec_depend>
+    <exec_depend>agro_mate_point_action</exec_depend>
     <export>
         <build_type>ament_cmake</build_type>
     </export>
 </package> 
+
