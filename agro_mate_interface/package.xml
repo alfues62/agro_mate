@@ -20,6 +20,9 @@
   <build_depend>geometry_msgs</build_depend>
   <exec_depend>geometry_msgs</exec_depend>
 
+  <build_depend>rclpy</build_depend>
+  <exec_depend>rclpy</exec_depend>
+
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

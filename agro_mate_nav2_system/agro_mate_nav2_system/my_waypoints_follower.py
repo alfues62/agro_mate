@@ -29,8 +29,8 @@ class WaypointFollowerClient(Node):
         waypoint2.header.frame_id = "map"
 
         waypoint3 = PoseStamped()
-        waypoint3.pose.position.x = 0.0
-        waypoint3.pose.position.y = 0.0
+        waypoint3.pose.position.x = 3.0
+        waypoint3.pose.position.y = 3.0
         waypoint3.pose.orientation.w = 1.0
 
         waypoint2.header.frame_id = "map"
