@@ -18,8 +18,8 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
         (os.path.join('share', package_name, 'config'), glob('config/*.lua')),
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
-        (os.path.join('share', package_name, 'config'), glob('config/*.xml'))
-
+        (os.path.join('share', package_name, 'config'), glob('config/*.xml')),
+        (os.path.join('share', package_name), glob('test/*.py')) 
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -31,7 +31,9 @@ setup(
     entry_points={
         'console_scripts': [
             'initial_pose_pub = agro_mate_nav2_system.initial_pose_pub:main',
-            'waypoint_follower = agro_mate_nav2_system.waypoint_follower:main' #añadir
+            'waypoint_follower = agro_mate_nav2_system.waypoint_follower:main',
+            'to_pose = agro_mate_nav2_system.to_pose:main',
+            'my_waypoints_follower = agro_mate_nav2_system.my_waypoints_follower:main'
         ],
     },
 )

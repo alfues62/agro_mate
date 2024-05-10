@@ -2,7 +2,7 @@ from setuptools import setup
 import os #incluir
 from glob import glob #incluir
 
-package_name = 'agro_mate_point_action'
+package_name = 'agro_mate_point_service'
 
 setup(
     name=package_name,
@@ -23,8 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'action_server = agro_mate_point_action.action_server:main', #incluir
-            'action_client = agro_mate_point_action.action_client:main'
+            'point_server = agro_mate_point_service.point_server:main' #incluir
         ],
     },
 )

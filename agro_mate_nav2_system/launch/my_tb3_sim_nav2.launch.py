@@ -75,6 +75,14 @@ def generate_launch_description():
         ),
 
         Node(
+            package='nav2_waypoint_follower',
+            executable='waypoint_follower',
+            name='waypoint_follower',
+            output='screen',
+            parameters=[nav2_yaml, {'use_sim_time': True}]
+        ),
+
+        Node(
             package='agro_mate_nav2_system',  # Nombre del paquete que contiene el ejecutable
             executable='initial_pose_pub',  # Ruta al archivo ejecutable dentro del paquete
             name='initial_pose_pub_node',  # Nombre que deseas dar al nodo
