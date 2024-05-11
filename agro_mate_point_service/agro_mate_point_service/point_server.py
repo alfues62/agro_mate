@@ -1,61 +1,45 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
-from std_msgs.msg import String
 from agro_mate_interface.srv import MyPointMsg
+from nav2_msgs.action import NavigateToPose
+from rclpy.action import ActionClient
+
 
 class NavigationService(Node):
     def __init__(self):
         super().__init__('point_server')
-        
-        # Crear el servicio que recibe coordenadas y las publica como PoseStamped
-        self.srv = self.create_service(MyPointMsg, 'goal_pose', self.navigation_callback)
-        #self.publisher = self.create_publisher(PoseStamped, '/goal_pose', 10)
-        
-        # Crear el subscriber para escuchar datos enviados desde la web u otros nodos
-        self.subscriber = self.create_subscription(
-            String, 
-            'goal_pose',  # Tópico en el que se espera recibir mensajes
-            self.web_command_callback, 
-            10
-        )
+        # Crear el servicio que recibe las coordenadas x y y
+        self.srv = self.create_service(MyPointMsg, 'point_server', self.navigation_callback)
+        # Cliente de acción para enviar objetivos de navegación
+        self.action_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
 
     def navigation_callback(self, request, response):
         x = request.x
         y = request.y
-        theta = request.theta  # Orientación opcional
         
-        # Crear el mensaje de destino
-        pose = PoseStamped()
-        pose.header.frame_id = 'map'
-        pose.header.stamp = self.get_clock().now().to_msg()  # Añadir la marca de tiempo
-        pose.pose.position.x = x
-        pose.pose.position.y = y
-        pose.pose.orientation.z = theta  # Opcional
-        pose.pose.orientation.w = 1.0  # Orientación predeterminada
+        # Crear un objetivo para NavigateToPose
+        goal = NavigateToPose.Goal()
+        goal.pose.header.frame_id = 'map'
+        goal.pose.pose.position.x = x
+        goal.pose.pose.position.y = y
+        # Mantener la orientación por defecto
+        goal.pose.pose.orientation.z = 0.0
+        goal.pose.pose.orientation.w = 1.0
 
-        # Publicar la posición
-        self.publisher.publish(pose)
+        # Esperar al servidor de acción
+        if not self.action_client.wait_for_server(10):  # 10 segundos de espera
+            self.get_logger().error("Servidor de acción no disponible")
+            response.success = False
+            return response
 
+        # Enviar el objetivo al cliente de acción
+        self.action_client.send_goal_async(goal)
+        self.get_logger().info(f'Objetivo enviado: x={x}, y={y}')
+
+        # Establecer la respuesta del servicio
         response.success = True
-        self.get_logger().info(f'Enviando coordenadas: x={x}, y={y}, theta={theta}')
-
         return response
-
-    def web_command_callback(self, msg):
-        # Procesar el mensaje recibido desde la web u otros nodos
-        self.get_logger().info(f'Recibido mensaje: {msg.data}')
-        
-        # Haz algo con el mensaje, como cambiar el comportamiento del nodo o actuar en consecuencia
-        if msg.data == 'cancel_navigation':
-            # Aquí podrías detener la navegación, por ejemplo
-            self.get_logger().info("Cancelando la navegación")
-            # Publicar un mensaje para detener el robot o cancelar la acción
-            # (Esto depende de tu arquitectura de control)
-        else:
-            # Maneja otros casos según tus necesidades
-            self.get_logger().info("Comando no reconocido.")
-
 
 def main():
     rclpy.init()
