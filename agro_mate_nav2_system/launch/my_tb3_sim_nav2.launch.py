@@ -88,14 +88,6 @@ def generate_launch_description():
             name='initial_pose_pub_node',  # Nombre que deseas dar al nodo
             output='screen'  # Tipo de salida
         ),
-        
-        Node(
-            package='nav2_waypoint_follower',
-            executable='waypoint_follower',
-            name='waypoint_follower',
-            output='screen',
-            parameters=[nav2_yaml, {'use_sim_time': True}]
-        ),
 
         Node(
             package='nav2_lifecycle_manager',
