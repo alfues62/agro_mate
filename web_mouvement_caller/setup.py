@@ -1,8 +1,8 @@
 from setuptools import setup
-import os # incluir esta línea
-from glob import glob # incluir esta línea
+import os #incluir
+from glob import glob #incluir
 
-package_name = 'publicador_velocidad'
+package_name = 'web_mouvement_caller'
 
 setup(
     name=package_name,
@@ -12,8 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        
-        (os.path.join('share', package_name), glob('launch/*.launch.py')) # incluir
+        (os.path.join('share', package_name), glob('launch/*.launch.py')) #incluir
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -24,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'publicador_velocidad = publicador_velocidad.simple_publisher:main' #inlcuir
+            'web_movement_server = web_mouvement_caller.web_movement_server:main' #incluir
         ],
     },
 )
