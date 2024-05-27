@@ -54,7 +54,7 @@ def main(args=None):
         waypoints_client.create_pose(2.0, 2.0, 1.0),
         waypoints_client.create_pose(4.0, 4.0, 1.0)
     ]
-    waypoints_client.send_goal(waypoints)
+    waypoints_client.send_goal(waypoints)#self.end_goal(waypoints) dentro de callback 
 
     rclpy.spin(waypoints_client)
 

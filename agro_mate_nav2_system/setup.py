@@ -32,7 +32,9 @@ setup(
         'console_scripts': [
             'initial_pose_pub = agro_mate_nav2_system.initial_pose_pub:main',
             'waypoint_follower = agro_mate_nav2_system.waypoint_follower:main',
-            'to_pose = agro_mate_nav2_system.to_pose:main'
+            'to_pose = agro_mate_nav2_system.to_pose:main',
+            'my_waypoints_follower = agro_mate_nav2_system.my_waypoints_follower:main',
+            'service_waypoint_caller = agro_mate_nav2_system.service_waypoint_caller:main'
         ],
     },
 )
