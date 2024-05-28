@@ -1,4 +1,4 @@
-image: /home/rmoldia/turtlebot3_ws/src/agro_mate/my_slam/map/my_map.pgm
+image: /home/tallalsudo/turtlebot3_ws/src/agro_mate/my_nav2_system/config/my_map.pgm
 mode: trinary
 resolution: 0.05
 origin: [-1.21, -2.38, 0]

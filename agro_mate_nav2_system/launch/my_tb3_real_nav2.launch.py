@@ -10,10 +10,10 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    nav2_yaml = os.path.join(get_package_share_directory('agro_mate_nav2_system'), 'config', 'my_nav2_params.yaml')
-    map_file = os.path.join(get_package_share_directory('agro_mate_nav2_system'), 'config', 'my_map.yaml')
+    nav2_yaml = os.path.join(get_package_share_directory('agro_mate_nav2_system'), 'config', 'my_nav2_params_real.yaml')
+    map_file = os.path.join(get_package_share_directory('agro_mate_nav2_system'), 'config', 'my_map_REAL.yaml')
     rviz_config_dir = os.path.join(get_package_share_directory('agro_mate_nav2_system'), 'config', 'agribot_v2.rviz')
-    urdf = os.path.join(get_package_share_directory('agro_mate_world_2'), 'urdf', 'turtlebot3_burger_pi.urdf')
+   # urdf = os.path.join(get_package_share_directory('turtlebot3_description'), 'urdf', 'turtlebot3_burger.urdf')
    # world = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'worlds', 'turtlebot3_worlds/burger.model')
 
 
@@ -23,7 +23,7 @@ def generate_launch_description():
             executable = 'map_server',
             name = 'map_server',
             output = 'screen',
-            parameters=[{'use_sim_time': True}, {'yaml_filename':map_file}]
+            parameters=[{'use_sim_time': False}, {'yaml_filename':map_file}]
         ),
 
         Node(
@@ -48,21 +48,21 @@ def generate_launch_description():
             executable='controller_server',
             name='controller_server',
             output='screen',
-            parameters=[nav2_yaml, {'use_sim_time': True}]
+            parameters=[nav2_yaml, {'use_sim_time': False}]
         ),
         Node(
             package='nav2_bt_navigator',
             executable='bt_navigator',
             name='bt_navigator',
             output='screen',
-            parameters=[nav2_yaml, {'use_sim_time': True}]
+            parameters=[nav2_yaml, {'use_sim_time': False}]
         ),
         Node(
             package='nav2_recoveries',
             executable='recoveries_server',
             name='recoveries_server',
             output='screen',
-            parameters=[nav2_yaml, {'use_sim_time': True}]
+            parameters=[nav2_yaml, {'use_sim_time': False}]
         ),
 
         Node(
@@ -70,7 +70,7 @@ def generate_launch_description():
             executable='rviz2',
             name='rviz2',
             arguments=['-d', rviz_config_dir],
-            parameters=[{'use_sim_time': True}],
+            parameters=[{'use_sim_time': False}],
             output='screen'
         ),
 
@@ -79,14 +79,7 @@ def generate_launch_description():
             executable='waypoint_follower',
             name='waypoint_follower',
             output='screen',
-            parameters=[nav2_yaml, {'use_sim_time': True}]
-        ),
-
-        Node(
-            package='agro_mate_nav2_system',  # Nombre del paquete que contiene el ejecutable
-            executable='initial_pose_pub',  # Ruta al archivo ejecutable dentro del paquete
-            name='initial_pose_pub_node',  # Nombre que deseas dar al nodo
-            output='screen'  # Tipo de salida
+            parameters=[nav2_yaml, {'use_sim_time': False}]
         ),
 
         Node(
@@ -94,7 +87,7 @@ def generate_launch_description():
             executable='lifecycle_manager',
             name='lifecycle_manager_pathplanner',
             output='screen',
-            parameters=[{'use_sim_time': True},
+            parameters=[{'use_sim_time': False},
                         {'autostart': True},
                         {'node_names':['map_server', 'amcl', 'planner_server', 'controller_server', 'recoveries_server', 'bt_navigator', 'waypoint_follower']}]
         )
