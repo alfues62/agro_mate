@@ -14,7 +14,7 @@ class Ros2OpenCVImageConverter(Node):
         self.bridge_object = CvBridge()
         self.image_sub = self.create_subscription(
             Image,
-            '/camera/image_raw',
+            '/image',
             self.camera_callback,
             QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
         )
