@@ -6,27 +6,50 @@ from sensor_msgs.msg import Image
 from rclpy.node import Node
 from rclpy.qos import ReliabilityPolicy, QoSProfile
 import imutils
+import boto3
+import threading
+import time
+from botocore.exceptions import NoCredentialsError
+
+"""
+o /image o /camera/image_raw
+"""
 
 class Ros2OpenCVImageConverter(Node):   
-
     def __init__(self):
         super().__init__('Ros2OpenCVImageConverter')
         self.bridge_object = CvBridge()
         self.image_sub = self.create_subscription(
             Image,
-            '/image',
+            '/camera/image_raw',
             self.camera_callback,
             QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
         )
-        
+        self.s3_client = boto3.client('s3', region_name='us-east-1')
+        self.bucket_name = 'bucketiaalfues'
+        self.last_upload_time = time.time()
+        self.upload_interval = 10  # Intervalo de 10 segundos
+
+    def upload_image(self, cv_image):
+        """Convierte la imagen de OpenCV a un archivo JPEG y la sube a S3."""
+        file_name = 'current_image.jpg'
+        cv2.imwrite(file_name, cv_image)
+        try:
+            self.s3_client.upload_file(file_name, self.bucket_name, file_name)
+            self.get_logger().info(f"File {file_name} uploaded to {self.bucket_name}/{file_name}.")
+        except FileNotFoundError:
+            self.get_logger().error(f"The file {file_name} was not found.")
+        except NoCredentialsError:
+            self.get_logger().error("Credentials not available.")
+
     def camera_callback(self, data):
         try:
             # Seleccionamos bgr8 porque es la codificacion de OpenCV por defecto
             cv_image = self.bridge_object.imgmsg_to_cv2(data, desired_encoding="bgr8")
         except CvBridgeError as e:
-            print(e)
+            self.get_logger().error(str(e))
             return
-        
+        """
         hsv = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
 
         #---AMARILLO---#
@@ -121,9 +144,16 @@ class Ros2OpenCVImageConverter(Node):
                 cy = int(M['m01'] / M['m00'])
                 cv2.circle(cv_image, (cx, cy), 7, (255, 255, 255), -1)
                 cv2.putText(cv_image, "Es una naranja", (cx - 20, cy - 20), cv2.FONT_ITALIC, 0.5, (255, 255, 255), 2)
+        """
 
         cv2.imshow("Imagen capturada por el robot", cv_image)
         cv2.waitKey(1)
+
+        # Subir imagen a S3 cada 10 segundos
+        current_time = time.time()
+        if current_time - self.last_upload_time >= self.upload_interval:
+            self.upload_image(cv_image)
+            self.last_upload_time = current_time
 
 def main(args=None):
     rclpy.init(args=args)
